@@ -1,0 +1,16 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Interest Analysis</title> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}"> 
+</head> 
+<body> 
+    <div class="container"> 
+    <h1>What analysis are you interested in?</h1> 
+    <form method="POST" action="{{ url_for('index') }}"> 
+        <input type="submit" name="analysis" value="products"> 
+        <input type="submit" name="analysis" value="movies"> 
+    </form> 
+</div> 
+</body> 
+</html> 
