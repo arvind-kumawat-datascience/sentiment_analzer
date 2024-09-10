@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Search Results</title> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='search.css') }}"> 
+</head> 
+<body> 
+    <h1>Search Results for "{{ query }}"</h1> 
+    <ul> 
+        {% for result in results %} 
+            <li><a href="{{ result.link }}">{{ result.title }}</a></li> 
+        {% endfor %} 
+    </ul> 
+</body> 
+</html> 

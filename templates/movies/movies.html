@@ -1,0 +1,14 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>IMDb Movie Search</title> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> 
+</head> 
+<body> 
+    <h1>IMDb Movie Search</h1> 
+    <form action="/search" method="GET"> 
+        <input type="text" name="query" placeholder="Enter movie title"> 
+        <button type="submit">Search</button> 
+    </form> 
+</body> 
+</html> 

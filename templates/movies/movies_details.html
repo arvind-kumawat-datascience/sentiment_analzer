@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Movie Details</title> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='details.css') }}"> 
+</head> 
+<body> 
+    <h1>{{ title }}</h1> 
+    <p>Rating: {{ rating }}</p> 
+    <p>Actors: {{ actors|join(', ') }}</p> 
+    <p>ID: {{ movie_id }}</p> 
+    <p>{{ plot }}</p> 
+    <h1>Reviews Analysis</h1> 
+    <form action="{{ url_for('movies_analyze') }}" method="post"> 
+        <input type="hidden" value="{{ movie_id }}" name="movie_id"> 
+        <button type="submit">Analyze</button> 
+    </form>     
+</body> 
+</html>
