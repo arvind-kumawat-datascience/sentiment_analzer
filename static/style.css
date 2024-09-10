@@ -1,0 +1,122 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+/* Body styles */
+/* Body styles */
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    135deg,
+    #00b4db,
+    #0083b0,
+    #6a0572,
+    #ff3366,
+    #ff0055
+  );
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+/* Form container styles */
+form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  padding: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the form */
+  color: #fff;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Heading styles */
+/* Heading styles */
+h1 {
+  margin-bottom: 220px;
+  color: white;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  text-align: center; /* Center the heading */
+}
+
+
+/* Text input styles */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+}
+
+/* Submit button styles */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff5858; /* Bright red color */
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff3030; /* Darker shade of red on hover */
+}
+
+/* Placeholder styles */
+input::placeholder {
+  color: rgba(155, 155, 155, 0.7);
+}
+
+/* Responsive styles for small screens */
+@media only screen and (max-width: 600px) {
+  form {
+    padding: 20px;
+  }
+}
