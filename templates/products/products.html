@@ -1,0 +1,14 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Product Search</title> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> 
+</head> 
+<body> 
+    <h1>Product Search</h1> 
+    <form action="/search" method="post"> 
+        <input type="text" name="query" placeholder="Enter product name" required> 
+        <button type="submit">Search</button> 
+    </form> 
+</body> 
+</html> 

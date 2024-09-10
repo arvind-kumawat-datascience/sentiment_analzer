@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Sentiment Analysis Results</title> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='analyze.css') }}"> 
+</head> 
+<body> 
+    <div class="h1c"> 
+    <h1>Sentiment Analysis Results</h1></div> 
+    <div class="h2c"> 
+    <h2>Movie Sentiment:</h2></div> 
+    <p class = "pc" 
+    {% if average_score %} 
+        <p><strong>Average Compound Score:</strong> {{ average_score }}</p> 
+        {% if average_score >= 0.05 %} 
+            <p class='positive'><strong>You can buy this product. This is worth it.</strong></p> 
+ 
+        {% elif average_score <= -0.05 %} 
+            <p class='negative'><strong>This product is not worth buying it.</strong></p> 
+        {% else %} 
+            <p class='neutral'><strong>I can't tell it as it is based on the opinions. It's neutral</strong></p> 
+        {% endif %} 
+    {% else %} 
+        <p>No reviews found for the movie.</p> 
+    {% endif %} 
+    </p> 
+     
+</body> 
+</html> 

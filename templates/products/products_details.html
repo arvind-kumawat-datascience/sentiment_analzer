@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Product Details</title> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='details.css') }}"> 
+</head> 
+<body> 
+    <h1>Product Details</h1> 
+    <h2>Title: {{ name }}</h2> 
+    <p>Description: {{ description }}</p> 
+    <p>Price: {{ price }}</p> 
+    <p>ID: {{ product_id}}</p> 
+    <h1>Reviews Analysis</h1> 
+    <form action="{{ url_for('products_analyze') }}" method="post"> 
+        <input type="hidden" value="{{ product_id }}" name="product_id"> 
+        <button type="submit">Analyze</button> 
+    </form>     
+</body> 
+</html> 
